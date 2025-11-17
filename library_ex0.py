@@ -9,14 +9,14 @@ def register_event_participants():
 
     while True:
         # Prompt the user for input
-        name = input("Enter participant's name (or 'quit' to exit): ").strip()
+        name = input("Enter participant's name (or 'quit' to exit). : ").strip()
         
         if name.lower() == 'quit':
             break
 
         # Input age and validate it is a number
         while True:
-            age_input = input(f"Enter {name}'s age: ").strip()
+            age_input = input(f"Enter        {name}'s age           : ").strip()
             try:
                 age = int(age_input)
                 if age <= 0:
@@ -26,7 +26,7 @@ def register_event_participants():
             except ValueError:
                 print("Invalid input for age. Please enter a number.")
 
-        event_choice = input(f"Enter {name}'s event choice: ").strip()
+        event_choice = input(f"Enter {name}'s event choice.         : ").strip()
 
         # Create a dictionary for the new participant
         new_participant = {
@@ -39,11 +39,12 @@ def register_event_participants():
         participants_list.append(new_participant)
         print(f"\n{name} registered successfully!\n")
 
-    # Display all registered participants
+    # Display all registered participants•••###########
+
     print("\n--- Registered Participants ---")
     if participants_list:
         for participant in participants_list:
-            print(f"Name: {participant['name']}, Age: {participant['age']}, Event: {participant['event_choice']}")
+            print(f"Name: {participant['name']}, Age: {participant['age']}, Event: {participant['event_choice']} \n")
     else:
         print("No participants registered.")
 
