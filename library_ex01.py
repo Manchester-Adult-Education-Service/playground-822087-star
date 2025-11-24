@@ -4,10 +4,11 @@ def register_event_participants():
     and stores it in a list of dictionaries.
     """
     participants_list = [] # Initialize an empty list to store all participants
-    
-    print("======== THIS MANCHESTER COMMUNITY CENTRE EVENT REGISTRATION  SYSTEM=============")
+    count=0
+    print("========* THIS IS MANCHESTER COMMUNITY CENTRE EVENT REGISTRATION  SYSTEM *  ==========\n")
 
     while True:
+    
         # INPUT THE USER NAME AND DETAILS 
 
         name = input("Enter participant's name ( (or) 'quit' to exit). : ").strip()
@@ -29,8 +30,13 @@ def register_event_participants():
                 
                 print("Invalid input for age. Please enter a number.")
 
+        print("1.stage show with  karoke    ")
+        print("2.coding shows.              ")
+        print("3.painting shows             ")
+                
         event_choice = input(f"Enter {name}'s event choice.         : ").strip()
-
+        
+            
         # Create a dictionary for the new participant
         new_participant = {
             'name': name,
@@ -42,17 +48,21 @@ def register_event_participants():
 
         participants_list.append(new_participant)
         print(f"\n{name} registered successfully!\n")
-
+        count=count+1
+        print (count)
     # Display all registered participants•••###########
 
-    print("\n=======================-REGISTERED PARTICIPANTS =============================")
+    print("\n=======================-REGISTERED PARTICIPANTS =============================\n")
+    
+    print("\n   Total come      . NAME.                                        AGE.                                  EVENT_CHOICE ")
 
     if participants_list:
         for participant in participants_list:
-            print(f"Name.      : {participant['name']},      Age: {participant['age']},         Event: {participant['event_choice']} \n")
+            print(f"{count}    .  Name.      : {participant['name']},          Age: {participant['age']},           Event: {participant['event_choice']} \n")
+
     else:
         print("                                  .No participants registered.")
-
+        #print(count)
     return participants_list
 
 if __name__ == "__main__":
