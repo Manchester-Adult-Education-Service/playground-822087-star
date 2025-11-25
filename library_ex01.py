@@ -48,21 +48,25 @@ def register_event_participants():
 
         participants_list.append(new_participant)
         print(f"\n{name} registered successfully!\n")
-        count=count+1
-        print (count)
+        #count=count+1
+        #print (count)
     # Display all registered participants•••###########
 
-    print("\n=======================-REGISTERED PARTICIPANTS =============================\n")
+    print("\n===-REGISTERED PARTICIPANTS =============================\n")
     
-    print("\n   Total come      . NAME.                                        AGE.                                  EVENT_CHOICE ")
+    print("\n Total come     .NAME.        AGE.            EVENT_CHOICE ")
 
     if participants_list:
+        count=0
+        #total =0
         for participant in participants_list:
-            print(f"{count}    .  Name.      : {participant['name']},          Age: {participant['age']},           Event: {participant['event_choice']} \n")
-
+            count=count+1
+            #total=total+count
+            print(f"{count}:       {participant['name']},      Age: {participant['age']}, Event: {participant['event_choice']} \n")
+            #print(total)
     else:
         print("                                  .No participants registered.")
-        #print(count)
+        #print(total)
     return participants_list
 
 if __name__ == "__main__":
