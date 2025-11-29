@@ -143,12 +143,12 @@ while not age_valid:
         for event_id , count in event_choice.items(): 
             if count > 0:
                 print (f/ "{events[event_id]}: {count} participant(s)")
-        else:
-            print("                                  .No participants registered.")
+            else:
+                print(" No participants registered.")
         #print(total)
         return participants_list
-        if __name__ == "__main__":
-        registered_users = register_event_participants()
+if __name__ ==  "__main__":
+    registered_users = register_event_participants()
 
 
         
