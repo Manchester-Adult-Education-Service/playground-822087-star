@@ -1,8 +1,9 @@
+
 def register_event_participants():
-    """
-    Collects participant information (name, age, event choice)
-    and stores it in a list of dictionaries.
-    """
+
+    #Collects participant information (name, age, event choice)
+    #and stores it in a list of dictionaries.
+
     participants_list = [] # Initialize an empty list to store all participants
     count=0
     print("========* THIS IS MANCHESTER COMMUNITY CENTRE EVENT REGISTRATION  SYSTEM *  ==========\n")
