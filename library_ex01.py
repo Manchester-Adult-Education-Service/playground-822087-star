@@ -6,24 +6,35 @@ def register_event_participants():
     participants_list = [] # Initialize an empty list to store all participants
     count=0
     print("========* THIS IS MANCHESTER COMMUNITY CENTRE EVENT REGISTRATION  SYSTEM *  ==========\n")
-
-    while True:
-    
+    print("1.Input the Registers details ")
+    print("2.Disply the Success registed ")
+    print("3.Exit the programm ")
+    print()
+    name=" "
+    ###while True:
+    while name !="quit":
         # INPUT THE USER NAME AND DETAILS 
 
         name = input("Enter participant's name ( (or) 'quit' to exit). : ").strip()
-        
+    #while   name =="" : 
         if name.lower() == 'quit':
             break
 
         # HERE INPUT AGE VALIDATE HAPPENING. IT IS A NUMBER  ..
 
-        while True:
+        #while True:
+
+        age_valid = False
+        while  not age_valid :
             age_input = input(f"Enter      {name}.   's age           : ").strip()
             try:
                 age = int(age_input)
-                if age <= 18:
-                    print("Age must be a over 18 please try next time . Please try again.")
+                if  10 <= age <=65 :
+                    age_valid =True
+                else:
+                #if age < 5 and 15 :
+                #if age < = 18:
+                    print("Age must be bitween 10 and 65 over  please try next time . Please try again.")
                     continue
                 break
             except ValueError:
@@ -35,7 +46,8 @@ def register_event_participants():
         print("3.painting shows             ")
                 
         event_choice = input(f"Enter {name}'s event choice.         : ").strip()
-        
+        ###event counting #####
+        event_choice ={1:0,2:0,3:0}
             
         # Create a dictionary for the new participant
         new_participant = {
@@ -62,8 +74,11 @@ def register_event_participants():
         for participant in participants_list:
             count=count+1
             #total=total+count
-            print(f"{count}:       {participant['name']},      Age: {participant['age']}, Event: {participant['event_choice']} \n")
+            print(f"{count}:       {participant['name']},      Age: {participant['age']},                 Event: {participant['event_choice']} \n")
             #print(total)
+        for event_id , count in event_choice.items(): 
+            if count > 0:
+                print (f/ "{events[event_id]}: {count} participant(s)")
     else:
         print("                                  .No participants registered.")
         #print(total)
