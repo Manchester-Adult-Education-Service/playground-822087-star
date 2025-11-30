@@ -6,6 +6,7 @@ def register_event_participants():
 
     participants_list = [] # Initialize an empty list to store all participants
     count=0
+    print()
     print("========* THIS IS MANCHESTER COMMUNITY CENTRE EVENT REGISTRATION  SYSTEM *  ==========\n")
     name=" "
     ###while True:
@@ -63,7 +64,7 @@ def register_event_participants():
 
     print("\n===-REGISTERED PARTICIPANTS =================================\n")
     
-    print("""\n Total come     .NAME.        AGE.            EVENT_CHOICE """)
+    print("""\n Total come       .NAME.              AGE.            EVENT_CHOICE """)
 
     if participants_list:
         count=0
@@ -71,7 +72,9 @@ def register_event_participants():
         for participant in participants_list:
             count=count+1
             #total=total+count
-            print(f"""{count}:           {participant['name']},      Age: {participant['age']},Event: {participant['event_choice']} \n""")
+            print()
+            print(f"{count} .            {participant['name']},                Age: {participant['age']},            Event: {participant['event_choice']} \n")
+            print()
             #print(total)
         #for event_id , count in event_choice.items(): 
          #   if count > 0:
