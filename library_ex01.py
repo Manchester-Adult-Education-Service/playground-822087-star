@@ -146,9 +146,9 @@ while not age_valid:
             else:
                 print(" No participants registered.")
         #print(total)
-        return participants_list
-if __name__ ==  "__main__":
-    registered_users = register_event_participants()
+return participants_list
+            ##if __name__ ==  "__main__":
+registered_users = register_event_participants()
 
 
         
