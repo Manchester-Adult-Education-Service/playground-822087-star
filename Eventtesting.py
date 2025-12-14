@@ -9,14 +9,21 @@ def register_event_participants():
     print()
     print("========* THIS IS MANCHESTER COMMUNITY CENTRE EVENT REGISTRATION  SYSTEM *  ==========\n")
     name=" "
-    ###while True:
-    while name !="quit":
+    name_valid= False
+
+    while len(name_valid)>15 or name_valid !="quit":
+    #while name !="quit":
         # INPUT THE USER NAME AND DETAILS 
 
         name = input("Enter participant's name ( (or) 'quit' to exit). : ").strip()
     #while   name =="" : 
-        if name.lower() == 'quit':
+        if name.lower()  == 'quit':
             break
+        #elif len(name) >15 :
+            print("Sorry your name is too loong minimise pls")
+            try:
+                if len(name)>15:
+                    name_valid=True
 
         # HERE INPUT AGE VALIDATE HAPPENING. IT IS A NUMBER  ..
 
