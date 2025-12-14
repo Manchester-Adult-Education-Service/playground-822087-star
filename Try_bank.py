@@ -22,6 +22,8 @@ def withdraw():
     else:
 
         return amount
+    #balance=0
+#def main():      
 balance=0
 is_running = True
 
@@ -42,18 +44,24 @@ while is_running:
         print("*******************************")
         
     elif choice == "2":
+        print("*******************************")
         balance +=deposit()
+        print("*******************************")
     elif choice =="3":
+        print("*******************************")
         balance -=withdraw()
+        print("*******************************")
+
     elif choice =="4":
         is_running = False 
     else :
         print ("That is not a valid choice")
-
+    print("*************************")
     print("Thank you Have a Nice Day")
+    print("*************************")
 
 #if __name__== '__main__':
-#main()
+    #main()
 
 
 
