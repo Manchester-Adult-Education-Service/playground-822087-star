@@ -1,11 +1,7 @@
 def show_balance():
-    
-    print(f" Your balance is $ {balance: .2f}")
-
-    #print("input")
+    print(f"Your balance is $ {balance: .2f}")
 
 def deposit():
-
     amount = float(input("Enter your amount to be deposited :  "))
 
     if amount < 0:
@@ -26,10 +22,7 @@ def withdraw():
     else:
 
         return amount
-
-###def main():
-
-    balance=0
+balance=0
 is_running = True
 
 while is_running:
@@ -42,11 +35,12 @@ while is_running:
     print("••••••••••••••••••••••••••")
 
     choice= input ("Enter your choice  (1- 4 : )" )
-    
     if choice == "1":
-        print()
+
+        print("*******************************")
         show_balance()
-        print()
+        print("*******************************")
+        
     elif choice == "2":
         balance +=deposit()
     elif choice =="3":
